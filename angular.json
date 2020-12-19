@@ -10,7 +10,7 @@
       },
       "root": "apps/app",
       "sourceRoot": "apps/app/src",
-      "prefix": "joepkockelkorn.github.io",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
