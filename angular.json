@@ -91,6 +91,12 @@
             "passWithNoTests": true,
             "setupFile": "apps/app/src/test-setup.ts"
           }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "cp -R dist/apps/app/*.* docs"
+          }
         }
       }
     },
