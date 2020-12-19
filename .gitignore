@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 
+# scully related
+scully/plugins/*.js
+scully/plugins/*.js.map
+
 # dependencies
 /node_modules
 
