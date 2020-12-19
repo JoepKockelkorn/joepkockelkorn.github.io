@@ -27,7 +27,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "release": "yarn nx build --prod && yarn scully && yarn nx run app:release"
   },
   "private": true,
   "dependencies": {
