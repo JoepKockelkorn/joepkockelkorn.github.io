@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "joepkockelkornGithubIo",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "joepkockelkorn.github.io",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
