@@ -13,7 +13,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/apps/app",
             "index": "apps/app/src/index.html",
@@ -23,7 +23,10 @@
             "aot": true,
             "assets": ["apps/app/src/favicon.ico", "apps/app/src/assets"],
             "styles": ["apps/app/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -57,7 +60,7 @@
           "outputs": ["{options.outputPath}"]
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "app:build"
           },
