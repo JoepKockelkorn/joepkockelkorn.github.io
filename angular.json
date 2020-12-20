@@ -36,7 +36,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -54,7 +53,8 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -87,10 +87,9 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/app/jest.config.js",
-            "tsConfig": "apps/app/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/app/src/test-setup.ts"
-          }
+            "passWithNoTests": true
+          },
+          "outputs": ["coverage/apps/app"]
         },
         "release": {
           "builder": "@nrwl/workspace:run-commands",
